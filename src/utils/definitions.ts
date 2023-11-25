@@ -24,6 +24,8 @@ export type Workouts = Workout[];
 
 export interface MobileLayoutProps {
     children: ReactNode;
+    showTopNavbar?: boolean;
+    showBottomNavbar?: boolean;
 }
 
 // Define button type-to-style mapping
