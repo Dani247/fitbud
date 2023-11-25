@@ -1,28 +1,26 @@
-'use client'
-import { useEffect, useState } from "react";
-import Button from "../Button";
-import ToggleSwitch from "../Toggle/Toggle";
+// 'use client'
+// import { useEffect, useState } from "react";
+// import ToggleSwitch from "../Toggle/Toggle";
 
-function DarkModeToggle({ show = true }: { show?: boolean }) {
-    const [darkMode, setDarkMode] = useState(Boolean(window.localStorage.getItem("darkmode")));
+function DarkModeToggle() {
+    // const [darkMode, setDarkMode] = useState(Boolean(window.localStorage.getItem("darkmode")));
 
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-            window.localStorage.setItem("darkmode", "true")
-        } else {
-            document.documentElement.classList.remove('dark');
-            window.localStorage.setItem("darkmode", "false")
-        }
-    }, [darkMode]);
+    // useEffect(() => {
+    //     if (darkMode) {
+    //         document.documentElement.classList.add('dark');
+    //         window.localStorage.setItem("darkmode", "true")
+    //     } else {
+    //         document.documentElement.classList.remove('dark');
+    //         window.localStorage.setItem("darkmode", "false")
+    //     }
+    // }, [darkMode]);
 
-    if (!show) return <></>;
+    // if (!show) return <></>;
 
     return (
         <div>
             Dark mode
-            <ToggleSwitch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
-
+            {/* <ToggleSwitch checked={darkMode} onChange={() => setDarkMode(!darkMode)} /> */}
         </div>
     );
 }
