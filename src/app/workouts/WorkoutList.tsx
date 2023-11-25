@@ -1,11 +1,14 @@
 import { getWorkoutsByUserId } from "@/serverActions/workouts";
-import { useUser } from "@/utils/hooks";
+import useUser from "@/utils/hooks/useUser";
 import Workout from './Workout'
 import Button from "@/components/Button";
+import Modal from "@/components/Modal/Modal";
+import useModal from "@/utils/hooks/useModal";
 
 export default async function WorkoutList() {
     const { userid } = useUser()
     const workouts = await getWorkoutsByUserId(userid);
+
 
     return <section className="p-4">
         <h1 className="text-xl">Your workouts</h1>

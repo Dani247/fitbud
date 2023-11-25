@@ -6,7 +6,7 @@ const MaterialButton: React.FC<MaterialButtonProps> = ({
   onClick,
   className
 }) => {
-  const buttonClass = `${buttonStyles[type]} font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex gap-2 ${className}`;
+  const buttonClass = `font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex gap-2 justify-center ${buttonStyles[type]} ${className || ''}`;
 
   return (
     <button className={buttonClass} onClick={onClick}>

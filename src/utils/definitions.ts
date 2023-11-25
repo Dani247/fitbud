@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 export interface Set {
     setid: string;
@@ -32,7 +32,8 @@ export const buttonStyles = {
     success: "bg-green-500 text-white",
     warning: "bg-yellow-500 text-white",
     error: "bg-red-500 text-white",
-    info: "bg-blue-500 text-white"
+    info: "bg-blue-500 text-white",
+    none: ""
 };
 
 export interface MaterialButtonProps {
@@ -40,5 +41,13 @@ export interface MaterialButtonProps {
     type?: keyof typeof buttonStyles;
     onClick?: () => void;
     className?: string
+}
+
+export interface ModalProps {
+    children: ReactNode;
+    isOpen: boolean;
+    onClose: () => void;
+    containerClassName?: string;
+    title?: string;
 }
 
